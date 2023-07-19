@@ -1,0 +1,85 @@
+<div>
+  <div>
+      Propiedades del Contenedor
+  </div>
+<br>
+  <div class="card-body">
+
+    <form [formGroup]="form"
+    (ngSubmit)="onSubmit(form.value)"
+    >
+
+      <div>
+        <label for="ownerCode">Codigo de Propietario</label>
+        <div class="col-md-10">
+          <input type="text" class="form-control" name="codigo_Propietario" id="ownerCode"
+          placeholder="Codigo de propietario" required maxlength="4" formControlName="codigo_Propietario">
+        </div>
+      </div>
+
+      <div>
+        <label
+          for="numero">Número</label>
+        <div>
+          <input type="text" class="form-control" name="numero" formControlName="numero"
+            id="numero" placeholder="Número de contenedor" required minlength="6">
+        </div>
+      </div>
+
+      <div>
+        <label
+          for="tipo">tipo</label>
+        <div>
+          <select class="form-control" name="tipo" formControlName="tipo">
+            <option value="Estándar">Estandar</option>
+            <option value="High Cube">High Cube</option>
+            <option value="Dry Van">Dry Van</option>
+            <option value="Reefer">Reefer</option>
+            <option value="Open Top">Open Top</option>
+            <option value="Open Side">Open Side</option>
+            <option value="Flat Rack">Flat Rack</option>
+            <option value="Tank">Tank</option>
+            <option value="Flexi-Tank">Flexi-Tank</option>
+            <option value="Contenedor de Plataforma">Contenedor de Plataforma</option>
+          </select>
+        </div>
+      </div>
+
+      <div>
+        <label
+          for="tamanio">Tamaño</label>
+        <div>
+          <select class="form-control" name="tamanio" formControlName="tamanio">
+            <option value="20">20</option>
+            <option value="40">40</option>
+          </select>
+        </div>
+      </div>
+
+      <div>
+        <label
+          for="peso">Peso</label>
+        <div>
+          <input type="text" class="form-control" name="peso" formControlName="peso"
+            id="peso" placeholder="Peso total de contenedor" required>
+        </div>
+      </div>
+
+      <div>
+        <label
+          for="tara">Tara</label>
+        <div>
+          <input type="text" class="form-control" name="tara" formControlName="tara"
+            id="tara" placeholder="Tara de contenedor" required>
+        </div>
+      </div>
+
+      <div>
+        <div>
+          <button type="submit" [disabled]="!form.valid">Agregar Contenedor</button>
+        </div>
+      </div>
+
+    </form>
+  </div>
+</div>

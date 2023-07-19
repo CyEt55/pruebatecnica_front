@@ -1,0 +1,29 @@
+<h2>Contenedores</h2>
+
+<table>
+  <tr>
+    <th>Codigo de propietario</th>
+    <th>Número</th>
+    <th>Tipo</th>
+    <th>Tamaño</th>
+    <th>Peso</th>
+    <th>Tara</th>
+    <th>Operaciones</th>
+  </tr>
+  <ng-container *ngFor = "let contenedor of contenedores">
+    <tr>
+      <td>{{ contenedor.codigo_Propietario }}</td>
+      <td>{{ contenedor.numero }}</td>
+      <td>{{ contenedor.tipo }}</td>
+      <td>{{ contenedor.tamanio }}</td>
+      <td>{{ contenedor.peso }}</td>
+      <td>{{ contenedor.tara }}</td>
+      <td><div><button (click)="handleDelete(contenedor.id)" class="button fancy-button elim">
+        Eliminar
+      </button>
+      <a [routerLink]="['/editar', contenedor.id]" class="button fancy-button edit">
+        Editar
+      </a></div></td>
+    </tr>
+  </ng-container>
+</table>
