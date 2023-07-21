@@ -3,8 +3,6 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Contenedor } from '../contenedor';
 
-/**/
-
 const baseUrl = 'http://localhost:5016/api/contenedores';
 
 @Injectable({
